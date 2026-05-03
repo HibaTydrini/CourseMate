@@ -1,0 +1,243 @@
+body{
+    background-color: #F5F9FF;
+    font-family: "Poppins", Sans-serif;
+    color:#6B7280;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+  padding: 16px 24px;    
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a{
+    color:#6B7280;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color:#2563EB;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#title{
+    color: #2563EB;
+}
+
+.left {
+    display: flex;
+    gap: 8px;
+}
+
+.profile-menu {
+    position: relative;
+    cursor: pointer;
+}
+.profile-icon {
+    font-size: 36px;
+    color: #2563EB;
+}
+.profile-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    width: 150px;
+    flex-direction: column;
+    display: none;
+}
+.profile-dropdown.open { display: block; }
+.profile-dropdown a {
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #6B7280;
+    display: block;
+}
+
+.profile-dropdown a:hover {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+
+/* ===== Student Dashboard ===== */
+
+.dashboard-header {
+    max-width: 1100px;
+    margin: 40px auto 30px;
+    padding: 0 24px;
+}
+
+.dashboard-header h1 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #6B7280;
+}
+
+.dashboard-cards {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
+    justify-content: center;
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: #EFF6FF;
+    padding: 30px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card h3 {
+    color: #2563EB;
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    color: #4B5563;
+    font-size: 15px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.18);
+}
+
+.dashboard-icon {
+    font-size: 42px;
+    padding: 14px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 16px;
+    transition: transform 0.25s ease;
+}
+
+.icon-blue {
+    color: #2563EB;
+    background-color: #DBEAFE;
+}
+
+.icon-purple {
+    color: #7C3AED;
+    background-color: #EDE9FE;
+}
+
+.icon-green {
+    color: #059669;
+    background-color: #D1FAE5;
+}
+
+.dashboard-card:hover .dashboard-icon {
+    transform: scale(1.1);
+}
+
+.dashboard-link {
+    text-decoration: none;
+}
+
+.dashboard-table {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.dashboard-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.4fr 1fr 1fr;
+    padding: 14px 20px;
+    border-bottom: 1px solid #E5E7EB;
+    color: #4B5563;
+}
+
+.dashboard-header-row {
+    background: #EFF6FF;
+    font-weight: 600;
+    color: #2563EB;
+}
+
+.dashboard-row:last-child {
+    border-bottom: none;
+}
+
+.modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.hidden{ display: none; }
+
+.modal-card{
+  background: #fff;
+  width: min(480px, 94vw);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.modal-label{
+  display: block;
+  margin: 12px 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+.modal-label select{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+.past-due {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+  font-weight: 600;
+}

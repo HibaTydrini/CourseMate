@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Courses</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="css/student-courses.css" />
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/notif.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li class="left">
+        <a href="student-dashboard.html">
+          <span class="material-symbols-outlined">school</span>
+        </a>
+        <a href="student-dashboard.html" id="title">
+          <h3>CourseMate</h3>
+        </a>
+      </li>
+
+      <li class="center">
+        <a href="student-dashboard.html" class="dashboard-back">Dashboard</a>
+      </li>
+
+      <li id="drop-down-menu" class="profile-menu">
+        <span class="material-symbols-outlined profile-icon">account_circle</span>
+        <div class="profile-dropdown">
+          <a href="profile.html">Profile</a>
+          <a href="index.html">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>Your Courses</h1>
+    <button class="primary-btn" id="addCourseBtn">+ Add Course</button>
+  </section>
+
+  <!-- Add Course Popup -->
+  <div id="courseFormPopup" class="form-popup hidden">
+    <div class="form-card">
+      <div class="form-header">
+        <h2>Add a Course</h2>
+        <button type="button" id="closeCourseForm" class="icon-btn">✕</button>
+      </div>
+
+      <form id="addCourseForm" class="course-form">
+        <label>
+          Course Code
+          <input name="code" type="text" placeholder="e.g. SOEN 287" required />
+        </label>
+
+        <label>
+          Course Name
+          <input name="name" type="text" placeholder="e.g. Web Programming" required />
+        </label>
+
+        <label>
+          Term
+          <select name="term" required>
+            <option value="">Select a term…</option>
+            <option>Winter 2026</option>
+            <option>Summer 2026</option>
+            <option>Fall 2026</option>
+          </select>
+        </label>
+
+        <div class="form-actions">
+          <button type="button" id="cancelCourseForm" class="secondary-btn">Cancel</button>
+          <button type="submit" class="primary-btn">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <section class="courses-section">
+    <div class="courses-card">
+      <table class="courses-table">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Term</th>
+            <th class="right">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="coursesBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="js/student-courses.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/notif.js"></script>
+  
+  <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+</body>
+
+</html>

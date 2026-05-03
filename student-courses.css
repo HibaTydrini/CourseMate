@@ -1,0 +1,231 @@
+body{
+    background-color: #F5F9FF;
+    font-family: "Poppins", Sans-serif;
+    color:#6B7280;
+    
+}
+/* ===== Navbar ===== */
+.navbar{
+  padding: 16px 24px;    
+}
+.navbar ul{
+  list-style: none;
+  margin: 0;
+  padding: 16px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.navbar a{
+    color:#6B7280;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color:#2563EB;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#title{
+    color: #2563EB;
+}
+
+.left{ justify-self: start; display:flex; align-items:center; gap:8px; }
+.center{ justify-self: center; }
+.profile-menu{ justify-self: end; position: relative; cursor: pointer;}
+.profile-icon:hover{
+  transform: translateY(-3px);                
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,.12)); 
+}
+.profile-icon {
+    font-size: 36px;
+    color: #2563EB;
+}
+.profile-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    width: 150px;
+    flex-direction: column;
+    display: none;
+}
+
+.profile-dropdown.open { display: block; }
+.profile-dropdown a {
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #6B7280;
+    display: block;
+}
+
+.profile-dropdown a:hover {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+
+.page-header {
+    max-width: 1100px;
+    margin: 40px auto 30px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primary-btn {
+    background: #0093F4;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.primary-btn:hover {
+    background: #007ad1;
+}
+/* ===== add course form ===== */
+
+
+.form-popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+    padding: 20px;
+}
+.hidden { display: none; }
+.form-card{
+     background: #fff;
+  width: min(480px, 94vw);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.course-form label {
+  display: block;
+  margin: 12px 0;
+  color: #374151;
+  font-size: 14px;
+}
+.course-form input,
+.course-form select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.courses-section{
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.courses-card{
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.courses-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.courses-table th,
+.courses-table td{
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.courses-table thead th{
+  background: #EFF6FF;
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.courses-table tbody tr:hover{
+  background: #F9FAFB;
+}
+
+
+
+
+
+
+.secondary-btn{
+  background: white;
+  color: #2563EB;
+  border: 1px solid #DCE7FF;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.secondary-btn:hover{
+  background: #EFF6FF;
+}
+
+.icon-btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.right{ text-align: right; }
+
+.action-btn{
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #DCE7FF;
+  background: white;
+  color: #2563EB;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 6px;
+}
+.action-btn:hover{ background: #EFF6FF; }
+
+.danger-btn{
+  border-color: #FECACA;
+  color: #DC2626;
+  background: #FFF5F5;
+}
+.danger-btn:hover{ background: #FFE4E6; }

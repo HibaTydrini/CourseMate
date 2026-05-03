@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="css/instructor-courses.css">
+    <link rel="stylesheet" href="css/theme.css">
+      <link rel="stylesheet" href="css/notif.css">
+</head>
+<body>
+     <nav class="navbar">
+        <ul>
+            <li class="left"><a href="instructor-dashboard.html"><span class="material-symbols-outlined">
+                school</span></a>
+            <a href="instructor-dashboard.html" id="title"><h3>CourseMate</h3></a>
+            </li>
+
+            <li class="center">
+                <a href="instructor-dashboard.html" class="dashboard-back">Dashboard</a>
+            </li>
+            
+            
+            <li id="drop-down-menu" class="profile-menu">
+                <span class="material-symbols-outlined profile-icon">
+                    account_circle
+                </span>
+
+                <div class="profile-dropdown">
+                <a href="profile.html">Profile</a>
+                <a href="index.html">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+
+   <section class="page-header">
+  <h1>Course Management</h1>
+  <button class="primary-btn" id="addCourseBtn">
+    <span class="material-symbols-outlined">add</span>
+    Add Course
+  </button>
+</section>
+
+<!-- Course Modal -->
+<div class="modal hidden" id="courseModal">
+  <div class="modal-card">
+    <h2 id="modalTitle">Add Course</h2>
+
+    <form id="courseForm">
+      <input type="hidden" id="editId">
+
+      <label>Course ID</label>
+      <input type="text" id="courseIdInput" required>
+
+      <label>Course Name</label>
+      <input type="text" id="courseNameInput" required>
+
+      <label>Term</label>
+      <input type="text" id="courseTermInput" required>
+
+      <div class="modal-actions">
+        <button type="button" class="secondary-btn" id="cancelBtn">Cancel</button>
+        <button type="submit" class="primary-btn">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<section class="courses-list" id="coursesList">
+  <!-- Courses will appear here -->
+</section>
+
+    <script src="js/instructor-courses.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/notif.js"></script>
+    <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+</body>
+</html>
